@@ -30,6 +30,18 @@
 
     <br/>
 
+    <div class="main-container">
+        <h2>Iniciar Sesión</h2>
+        <form class="login-form">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar Sesión">
+            <input type="button" value="Cancelar" onclick="cancelLogin()">
+        </form>
+        <p id="message" class="error-message"></p> <!-- Mensaje de error o éxito -->
+    </div>
+    
+
     <!-- ------MAIN-CONTENT------ -->
     <div id="contenidoPrincipal" class="container">
         <div class="card">

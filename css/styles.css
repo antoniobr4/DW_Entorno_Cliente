@@ -1,27 +1,35 @@
 body {
-  background: #ffffff; 
+  background-color: #ffffff;
   text-align: justify;
-  font-family: Tahoma, Geneva, sans-serif; 
+  font-family: Tahoma, Geneva, sans-serif;
   font-size: 14px;
-  color: white; 
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   background-color: #77bfd7;
   text-align: center;
   padding: 5px;
-  position: relative;
-  top: 0%;
-  left: 0%;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
   border-radius: 2rem;
   margin-bottom: 2rem;
 }
 
+.header img {
+  border-radius: 50%;
+  width: 114px;
+  height: 128px;
+}
+
 .topnav {
   overflow: hidden;
-  background-color: #d27ed2; 
+  background-color: #d27ed2;
   border-radius: 2rem;
   padding: 0.8rem;
   height: 3rem;
@@ -32,8 +40,8 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -41,11 +49,86 @@ body {
 
 .topnav a:hover {
   font-size: 18px;
-  color: #77bfd7; 
+  color: #77bfd7;
   border-radius: 1rem;
   transition: 0.5s;
 }
 
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  flex-direction: column;
+}
+
+/* Estilo del formulario de login */
+.login-form h2 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.login-form {
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #77bfd7;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Input de texto y contraseña */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #d27ed2;
+}
+
+/* Botones de iniciar sesión y cancelar */
+.login-form input[type="submit"],
+.login-form input[type="button"] {
+  background-color: #d27ed2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45%;
+  margin: 0 5px;
+}
+
+/* Ajustamos el hover de los botones */
+.login-form input[type="submit"]:hover,
+.login-form input[type="button"]:hover {
+  background-color: #77bfd7;
+  transition: 0.3s;
+}
+
+/* Mensaje de error o éxito */
+.error-message,
+.welcome-message {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.welcome-message {
+  color: green;
+}
+
+/* Contenedor de tarjetas (ejercicios) */
 .container {
   display: flex;
   justify-content: center;
@@ -53,23 +136,24 @@ body {
   gap: 16px;
 }
 
+/* Estilo de las tarjetas */
 .card {
-  background-color: #77bfd7; 
+  background-color: #77bfd7;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: auto;
   border-radius: 15px;
-  font-family: Tahoma, Geneva, sans-serif; 
-  color: white; 
+  font-family: Tahoma, Geneva, sans-serif;
+  color: white;
 }
 
 .cardTitle {
   font-size: 24px;
   padding: 10px 10px 0 10px;
-  background-color: #d27ed2; 
+  background-color: #d27ed2;
   border-radius: 9px 9px 0 0;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .cardBody {
@@ -79,7 +163,7 @@ body {
 }
 
 .cardFooter {
-  background-color: #d27ed2; 
+  background-color: #d27ed2;
   border-radius: 0 0 9px 9px;
   padding: 10px;
   text-align: center;
@@ -87,31 +171,26 @@ body {
 
 .cardFooter a {
   text-decoration: none;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* Responsividad para móviles */
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
   }
 }
 
+/* Footer */
 .footer {
-  background-color: #77bfd7; 
+  background-color: #77bfd7;
   border-radius: 2rem;
   text-align: center;
   padding: 20px;
-  position: absolute;
-  width: 97vi;
-  bottom: 2%;
-  left: 0%;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+  margin-top: auto;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
-.header img {
-  border-radius: 50%; 
-  width: 114px;
-  height: 128px;
-}
+

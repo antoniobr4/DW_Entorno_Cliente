@@ -1,44 +1,37 @@
+"use strict";
 
-const usuarioCorrecto = "usuario";
-const contrasenaCorrecta = "1234";
+document.getElementById('login-form').addEventListener('submit', function (event) {
+  event.preventDefault(); 
 
-function solicitarCredenciales() {
-  let nombreUsuario;
-  let contrasena;
-  let continuar = true; 
+  
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const messageElement = document.getElementById('message');
 
-  while (continuar) {
-    nombreUsuario = prompt("Por favor, ingrese su nombre de usuario:");
-
-    if (nombreUsuario === null) {
-      alert("Has cancelado el ingreso.");
-      return; 
-    }
-
-    if (nombreUsuario.length < 3) {
-      alert("El nombre de usuario debe tener al menos 3 caracteres.");
-      continue; 
-    }
-
-    contrasena = prompt("Por favor, ingrese su contraseña:");
-
-    if (contrasena === null) {
-      alert("Has cancelado el ingreso.");
-     return;
-    }
-
-   if (nombreUsuario === usuarioCorrecto && contrasena === contrasenaCorrecta) {
-     alert("¡Bienvenido! Acceso concedido.");
-     document.getElementById("contenidoPrincipal").style.display = "block"; 
-     continuar = false; 
-    } else {
-     let reintentar = confirm("Nombre de usuario o contraseña incorrectos. ¿Desea intentarlo de nuevo?");
-     if (!reintentar) {
-       alert("Has cancelado el ingreso.");
-       continuar = false; 
-      }
-    }
+  
+  if (!/^[a-zA-Z]{3,}$/.test(username)) {
+      messageElement.textContent = "El nombre de usuario debe tener al menos 3 letras.";
+      return;
   }
-}
 
-solicitarCredenciales();
+  
+  const validUsername = "antonio";
+  const validPassword = "1234";
+
+  
+  if (username === validUsername && password === validPassword) {
+      messageElement.textContent = "¡Bienvenido, " + username + "!";
+      messageElement.style.color = "green"; 
+      document.getElementById('login-container').style.display = 'none'; 
+      document.getElementById('main-content').style.display = 'block'; 
+  } else {
+      messageElement.textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
+      messageElement.style.color = "red"; 
+  }
+});
+
+
+document.getElementById('cancel-btn').addEventListener('click', function () {
+  document.getElementById('login-form').reset(); 
+  document.getElementById('message').textContent = ""; 
+});
