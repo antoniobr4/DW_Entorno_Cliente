@@ -4,22 +4,38 @@ body {
   font-family: Tahoma, Geneva, sans-serif; 
   font-size: 14px;
   color: white; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+/* HEADER */
 
 .header {
   background-color: #77bfd7;
+  opacity: 0.9; 
   text-align: center;
   padding: 5px;
-  position: relative;
-  top: 0%;
-  left: 0%;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+  color: rgba(255, 250, 250, 0.90); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
   border-radius: 2rem;
   margin-bottom: 2rem;
 }
 
+.header img {
+  border-radius: 50%; 
+  width: 114px;
+  height: 128px;
+}
+
+/* MENU */
+
 .topnav {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   overflow: hidden;
   background-color: #d27ed2; 
   border-radius: 2rem;
@@ -27,24 +43,28 @@ body {
   height: 3rem;
   font-size: 16px;
   text-shadow: 2px 2px 2px #000000;
+  opacity: 0.9; 
 }
 
 .topnav a {
-  float: left;
   display: block;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
+  color: rgba(255, 250, 250, 0.90);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .topnav a:hover {
+  background-color: #77bfd7; 
+  color: #b961b9; 
   font-size: 18px;
-  color: #77bfd7; 
   border-radius: 1rem;
   transition: 0.5s;
 }
+
+/* CONTAINER */
 
 .container {
   display: flex;
@@ -58,18 +78,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: auto;
+  width: 300px; 
   border-radius: 15px;
-  font-family: Tahoma, Geneva, sans-serif; 
   color: white; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .cardTitle {
   font-size: 24px;
-  padding: 10px 10px 0 10px;
+  padding: 10px;
   background-color: #d27ed2; 
   border-radius: 9px 9px 0 0;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .cardBody {
@@ -88,8 +108,10 @@ body {
 .cardFooter a {
   text-decoration: none;
   color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
+
+/* MEDIA QUERY */
 
 @media screen and (max-width: 600px) {
   .container {
@@ -97,21 +119,17 @@ body {
   }
 }
 
+/* FOOTER */
+
 .footer {
   background-color: #77bfd7; 
   border-radius: 2rem;
   text-align: center;
   padding: 20px;
-  position: absolute;
-  width: 97vi;
-  bottom: 2%;
-  left: 0%;
-  color: white; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
-}
-
-.header img {
-  border-radius: 50%; 
-  width: 114px;
-  height: 128px;
+  position: fixed; 
+  width: 100%; 
+  bottom: 0;
+  left: 0;
+  color: rgba(255, 250, 250, 0.90);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
