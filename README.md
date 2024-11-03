@@ -18,6 +18,8 @@ El proyecto contiene las siguientes secciones principales:
   
   - **Ejercicio 02**: MiniCalculadora, que permite realizar operaciones básicas (suma, resta, multiplicación, división) y calcular el valor entero y la parte decimal de un número.
 
+  - **Ejercicio 03**: Operaciones básicas con matrices, que permite al usuario generar dos matrices aleatorias y realizar operaciones de suma, resta y multiplicación entre ellas.
+
 - **Footer**: Pie de página con información del desarrollador.
 
 ## Sistema de Login
@@ -48,9 +50,12 @@ El menú de navegación proporciona enlaces a varios recursos útiles para apren
 
 - **Conversor**: Permite ingresar un número y obtener sus equivalentes en diferentes sistemas numéricos (binario, octal, hexadecimal).
 - **MiniCalculadora**: Permite realizar operaciones matemáticas básicas y obtener resultados específicos (valor entero, parte decimal y factorial).
+- **Operaciones con Matrices**: Permite al usuario generar dos matrices aleatorias y realizar operaciones básicas (suma, resta y multiplicación) entre ellas.
 
 ## Autor
 
 Desarrollado por: **Antonio Jesús Bravo Rueda**
+
+
 
 
