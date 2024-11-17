@@ -6,36 +6,38 @@ Este proyecto forma parte de las actividades de la asignatura **Desarrollo Web e
 
 El proyecto contiene las siguientes secciones principales:
 
-- **Header**: Incluye el título del proyecto y el nombre del desarrollador. La imagen se presenta de forma redondeada.
-  
-- **Formulario de Inicio de Sesión**: Solicita al usuario ingresar su nombre y contraseña para acceder al contenido principal del sitio.
+- **Header**:  
+  Incluye el título del proyecto y el nombre del desarrollador. La imagen se presenta de forma redondeada.
 
-- **Menú de navegación**: Contiene enlaces a recursos externos como w3schools, MDN, y un repositorio de GitHub, así como opciones para acceder a ejercicios de JavaScript.
+- **Menú de navegación**:  
+  Contiene enlaces a recursos externos como w3schools, MDN, y un repositorio de GitHub, así como opciones para cerrar sesión.
 
-- **Contenido principal**: Incluye tarjetas con enlaces a ejercicios que demuestran la refactorización de funciones en JavaScript, accesibles tras un login exitoso.
+- **Contenido principal**:  
+  Presenta una sección práctica de CRUD (crear, leer, actualizar y eliminar) con almacenamiento utilizando IndexedDB.
 
-  - **Ejercicio 01**: Conversor, donde se puede ingresar un número y obtener su representación en binario, octal y hexadecimal.
-  
-  - **Ejercicio 02**: MiniCalculadora, que permite realizar operaciones básicas (suma, resta, multiplicación, división) y calcular el valor entero y la parte decimal de un número.
+  - **Formulario CRUD**: Permite al usuario ingresar un nombre y una edad, guardarlos en una tabla dinámica y realizar operaciones de gestión sobre los datos.
 
-  - **Ejercicio 03**: Operaciones básicas con matrices, que permite al usuario generar dos matrices aleatorias y realizar operaciones de suma, resta y multiplicación entre ellas.
+- **Footer**:  
+  Pie de página con información del desarrollador.
 
-- **Footer**: Pie de página con información del desarrollador.
+## Sistema CRUD
 
-## Sistema de Login
+El sistema CRUD incluido en este proyecto permite a los usuarios interactuar con un formulario que gestiona nombres y edades. Las funcionalidades son:
 
-El sistema de login consiste en un formulario que solicita al usuario ingresar un **nombre de usuario** y una **contraseña**. El comportamiento del login es el siguiente:
+1. **Formulario de ingreso**:  
+   - Solicita un nombre y una edad. Ambos campos son obligatorios.
+   - Incluye un botón de "Guardar" que almacena los datos en una base de datos local utilizando **IndexedDB**.
 
-1. **Validación**: 
-   - El nombre de usuario debe tener al menos 3 caracteres.
-   - Si los datos no son correctos, se muestra un mensaje de error.
-   - Si los datos son correctos (nombre de usuario predeterminado: `jota`, contraseña: `dejame`), se muestra un mensaje de bienvenida en el formulario: "Bienvenido!".
+2. **Tabla dinámica**:  
+   - Muestra los datos ingresados en tiempo real.
+   - Permite realizar operaciones de:
+     - **Creación**: Agregar nuevos registros.
+     - **Lectura**: Visualizar los registros almacenados.
+     - **Actualización**: Modificar un registro existente.
+     - **Eliminación**: Eliminar registros seleccionados.
 
-2. **Revelación de Contenido**: 
-   - Tras un login exitoso, el contenido principal del sitio (tarjetas de ejercicios) se hace visible, mientras que el formulario se oculta.
-
-3. **Estilos del formulario**: 
-   - El formulario de inicio de sesión incluye un título "Iniciar Sesión", con botones de envío y cancelación alineados y un mensaje de retroalimentación ubicado al final del formulario.
+3. **Botón de navegación**:  
+   - Un enlace en el pie de página permite regresar a la página principal del proyecto.
 
 ## Navegación
 
@@ -46,15 +48,28 @@ El menú de navegación proporciona enlaces a varios recursos útiles para apren
 - [MDN JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 - [GitHub del proyecto](https://github.com/antoniobr4/DW_Entorno_Cliente)
 
-### Ejercicios disponibles:
+## Ejercicios disponibles
 
-- **Conversor**: Permite ingresar un número y obtener sus equivalentes en diferentes sistemas numéricos (binario, octal, hexadecimal).
-- **MiniCalculadora**: Permite realizar operaciones matemáticas básicas y obtener resultados específicos (valor entero, parte decimal y factorial).
-- **Operaciones con Matrices**: Permite al usuario generar dos matrices aleatorias y realizar operaciones básicas (suma, resta y multiplicación) entre ellas.
+- **Conversor**:  
+  Permite ingresar un número y obtener sus equivalentes en diferentes sistemas numéricos (binario, octal, hexadecimal).
+
+- **MiniCalculadora**:  
+  Permite realizar operaciones matemáticas básicas y obtener resultados específicos (valor entero, parte decimal y factorial).
+
+- **Operaciones con Matrices**:  
+  Permite al usuario generar dos matrices aleatorias y realizar operaciones básicas (suma, resta y multiplicación) entre ellas.
+
+- **CRUD: Guardar nombre y edad**:  
+  Una interfaz interactiva que permite:
+  - Ingresar un nombre y una edad a través de un formulario.
+  - Visualizar los datos almacenados en una tabla dinámica.
+  - Realizar operaciones de creación, lectura, actualización y eliminación (CRUD) sobre los registros.
 
 ## Autor
 
 Desarrollado por: **Antonio Jesús Bravo Rueda**
+
+© 2024 Antonio Jesús Bravo Rueda
 
 
 
